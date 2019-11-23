@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -93,6 +94,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -124,6 +126,42 @@
           }
         }
       }
-    }},
+    },
+    "ngx-emoji-selector": {
+      "projectType": "library",
+      "root": "projects/ngx-emoji-selector",
+      "sourceRoot": "projects/ngx-emoji-selector/src",
+      "prefix": "",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-emoji-selector/tsconfig.lib.json",
+            "project": "projects/ngx-emoji-selector/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-emoji-selector/src/test.ts",
+            "tsConfig": "projects/ngx-emoji-selector/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-emoji-selector/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-emoji-selector/tsconfig.lib.json",
+              "projects/ngx-emoji-selector/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "emoji-selector"
 }

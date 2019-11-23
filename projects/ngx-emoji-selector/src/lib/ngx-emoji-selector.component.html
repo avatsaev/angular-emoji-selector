@@ -1,0 +1,9 @@
+<div class="main-container">
+  <span
+          *ngFor="let emoji of allEmojis"
+          [matDialogClose]="emoji"
+          class="emoji"
+  >
+    {{emoji}}
+  </span>
+</div>
